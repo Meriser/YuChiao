@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>點我有驚喜 ( •'-'• ) ✧ </title>
+    <link rel="stylesheet" href="./hover.css">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+            font-family: sans-serif;
+            color: dodgerblue;
+        }
+
+        body:before {
+            content: ' ';
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url(./images/動漫唯美素材.jpg) center 0 no-repeat;
+            background-size: cover;
+            filter: blur(3px);
+        }
+
+        .btn {
+            display: block;
+            text-decoration: none;
+            color: dodgerblue;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            border-radius: 50px;
+            font-size: 2rem;
+            transition: 0.3s all;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .card {
+            display: none;
+            max-width: 370px;
+            padding: 1.5rem;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 30px #ffffff;
+            border-radius: 10px;
+            letter-spacing: 2px;
+            background-image: url(./images/小水豚.png);
+            background-repeat: no-repeat;
+            background-position: 0 bottom;
+            transition: 0.3s all;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 50px #ffffff;
+        }
+
+        .card__img {
+            margin: 0 auto 1rem auto;
+            width: 240px;
+            display: block;
+        }
+
+        .card__title {
+            text-align: center;
+            font-size: 24px;
+            margin: 0.5rem 0;
+        }
+
+        .card__text {
+            line-height: 2;
+            font-size: 18px;
+        }
+
+        .card__name {
+            text-align: right;
+            margin: 0.25rem;
+            color: dodgerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- AOS.js -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 2000,
+        });
+    </script>
+
+    <!-- content -->
+    <div class="container">
+        <a data-aos="zoom-in" href="#" class="btn hvr-shutter-out-horizontal">點我有驚喜 ( •'-'• ) ✧ </a>
+
+        <div data-aos="zoom-in" class="card">
+            <img src="./images/生日蛋糕.png" alt="cake" class="card__img">
+            <h2 class="card__title">Happy Birdtday ๐•ᴗ•๐</h2>
+            <p class="card__text">
+                首先祝福我大喬姊破蛋快樂 ~ ~ ~<br>
+                希望你的所有願望都能成真，所有美好與溫暖都能帶入你的生命中，小孩能跟水豚一樣勾錐，還有記得跟你的小孩說我有送過你禮物 *⸜( •ᴗ• )⸝*
+            </p>
+            <h3 class="card__name">- Meri -</h3>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script>
+        const btn = document.querySelector('.btn');
+        const card = document.querySelector('.card');
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            btn.style.display = 'none';
+            card.style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>
